@@ -108,7 +108,7 @@ test_dataset = TextDataset(lines_test, lines_test_labels, word2idx, 55)
 test_loader = DataLoader(test_dataset, batch_size=32,shuffle=False)
 
 #导入模型
-para = torch.load('/home/user_home/qiankunjie/project/First-exam/BiLSTM/best_model_acc:0.79_f1:0.791_hidden:512_lr:0.001.pt')
+para = torch.load('/home/user_home/qiankunjie/project/First-exam/BiLSTM/best_model.pt')
 model = BiLSTM(vocab_size,300,512,True,2,2,0.1).to(device)
 model.load_state_dict(para)
 #测试结果
